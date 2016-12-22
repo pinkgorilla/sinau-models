@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "6"
+  - "5"
+  - "4"  
+addons:
+  code_climate:
+      repo_token: 99dbf606679feb7268b739665ebfbb4b0e8e6962296f5283f40d3969105cdbf3
+after_success:
+- npm run coveralls
+- npm run codeclimate
+cache: false
