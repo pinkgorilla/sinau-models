@@ -15,23 +15,25 @@ module.exports = function(data) {
 
     data.should.have.property("email");
     data.email.should.instanceof(String);
-    
+
     data.should.have.property("isLocked");
     data.isLocked.should.instanceof(Boolean);
 
     data.should.have.property("roles");
     data.roles.should.instanceof(Array);
-    for (var role of data.roles)
-    {
+    for (var role of data.roles) {
         validateRole(role);
     }
 
 
     data.should.have.property("profile");
     data.profile.should.instanceof(Object);
-    
+
     data.should.have.property("facebook");
     data.facebook.should.instanceof(Object);
-    
+
+    data.should.have.property("kind");
+    data.kind.should.instanceof(String);
+
     validateProfile(data.profile);
 };

@@ -14,6 +14,7 @@ module.exports = class Account extends BaseModel {
         this.isLocked = false;
         this.profile = new Profile();
         this.roles = [];
+        this.kind = "";
         this.facebook = {};
 
         this.copy(source);
