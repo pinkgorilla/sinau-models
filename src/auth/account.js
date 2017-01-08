@@ -11,11 +11,14 @@ module.exports = class Account extends BaseModel {
         this.username = "";
         this.password = "";
         this.email = "";
+        this.displayName = "";
+        this.picture = "";
         this.isLocked = false;
         this.profile = new Profile();
         this.roles = [];
         this.kind = "";
         this.facebook = {};
+        this.google = {};
 
         this.copy(source);
         this.profile = new Profile(this.profile);

@@ -16,6 +16,12 @@ module.exports = function(data) {
     data.should.have.property("email");
     data.email.should.instanceof(String);
 
+    data.should.have.property("displayName");
+    data.displayName.should.instanceof(String);
+
+    data.should.have.property("picture");
+    data.picture.should.instanceof(String);
+
     data.should.have.property("isLocked");
     data.isLocked.should.instanceof(Boolean);
 
@@ -31,6 +37,9 @@ module.exports = function(data) {
 
     data.should.have.property("facebook");
     data.facebook.should.instanceof(Object);
+
+    data.should.have.property("google");
+    data.google.should.instanceof(Object);
 
     data.should.have.property("kind");
     data.kind.should.instanceof(String);
